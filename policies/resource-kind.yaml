@@ -16,7 +16,7 @@ spec:
   - match:
       resources:
         kinds:
-        - ?*
+        - "*"
     name: add-kind
     validate:
       message: The Resource kind is not approved by IO.
