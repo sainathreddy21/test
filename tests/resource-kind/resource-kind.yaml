@@ -9,5 +9,5 @@ results:
   - policy: resource-kind
     rule: match
     resource: test-bucket
-    kind: Bucket
-    result: pass
+    kind: Bucket12
+    result: fail
