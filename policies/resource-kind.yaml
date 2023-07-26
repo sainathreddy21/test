@@ -22,7 +22,7 @@ spec:
       message: The Resource kind is not approved by IO.
       pattern:
         kind: Bucket
+      pattern:
         kind: Pubsub
+      pattern:
         kind: Dataflow
-        kind: CMEK
-        kind: IAM
