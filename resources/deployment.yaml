@@ -9,3 +9,6 @@ spec:
     location: US
   providerConfigRef:
     name: default-test
+  apiVersion: v1
+  labels:
+    purpose: production
