@@ -1,0 +1,13 @@
+apiVersion: storage.gcp.upbound.io/v1beta1
+kind: Bucket
+name: validate_resource_kind
+policies:
+  - resource-kind.yaml
+resources:
+  - bucket.yaml
+results:
+  - policy: resource-kind
+    rule: match
+    resource: test-bucket
+    kind: Bucket
+    result: pass
