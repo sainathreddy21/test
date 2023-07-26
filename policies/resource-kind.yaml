@@ -16,7 +16,7 @@ spec:
   - match:
       resources:
         kinds:
-        - apps/v1/Deployment
+        - apps/v1/deployment
     name: add-kind
     validate:
       message: The Resource kind is not approved by IO.
