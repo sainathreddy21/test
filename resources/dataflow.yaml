@@ -1,0 +1,14 @@
+apiVersion: storage.gcp.upbound.io/v1beta1
+kind: Dataflow
+metadata:
+  Name: crossplane-bucket-test
+  labels:
+    docs.crossplane.io/example: provider-gcp
+spec:
+  forProvider:
+    location: US
+  providerConfigRef:
+    name: default-test
+  apiVersion: v1
+  labels:
+    purpose: production
