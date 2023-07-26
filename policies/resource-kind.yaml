@@ -1,0 +1,47 @@
+apiVersion: kyverno.io/v1
+
+kind: Policy
+
+metadata:
+
+  annotations:
+
+    policies.kyverno.io/category: DevSecOps
+
+    policies.kyverno.io/description: Validate if the Resource is approved by IO
+
+    policies.kyverno.io/severity: high
+
+    policies.kyverno.io/subject: Resource Creation Validation Check
+
+    policies.kyverno.io/title: Resource Validation Check
+
+  labels:
+
+    argocd.argoproj.io/instance: kyverno-policies
+
+  name: resourcekindvalidation
+
+spec:
+
+  validationFailureAction: Enforce
+
+  rules:
+
+  - match:
+
+      resources:
+
+        kinds:
+
+        - apps/v1/Deployment
+
+    name: add-kind
+
+    validate:
+
+      message: The Resource kind is not approved by IO.
+
+      pattern:
+
+        kind: ["Bucket","Policy"]
