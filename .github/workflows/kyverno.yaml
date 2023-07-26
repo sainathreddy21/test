@@ -18,4 +18,4 @@ jobs:
       - name: Test new resources against existing policies
         run: ./kyverno apply policies/ -r resources/
       - name: Test pre-defined cases
-        run: ./kyverno test tests/
+        run: ./kyverno test tests/resource-kind/
