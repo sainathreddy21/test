@@ -22,4 +22,4 @@ spec:
       message: The Resource kind is not approved by IO.
       pattern:
         kind: 
-        - "Bucket"
+        - Bucket
