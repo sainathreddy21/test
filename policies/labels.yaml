@@ -1,17 +1,33 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
 metadata:
-  name: require-ns-purpose-label
+  name: disallow-latest-tag
 spec:
-  validationFailureAction: Enforce
+  validationFailureAction: Audit
   rules:
-  - name: require-ns-purpose-label
+  - name: require-image-tag
     match:
       any:
       - resources:
           kinds:
-          - Bucket
+          - Pod
+        clusterRoles:
+        - cluster-admin
     validate:
-      message: "You must have label `purpose` with value `production` set on all new namespaces."
+      message: "An image tag is required."  
       pattern:
-        metadata:
-          labels:
-            purpose: production
+        spec:
+          containers:
+          - image: "*:*"
+  - name: validate-image-tag
+    match:
+      any:
+      - resources:
+          kinds:
+          - Pod
+    validate:
+      message: "Using a mutable image tag e.g. 'latest' is not allowed."
+      pattern:
+        spec:
+          containers:
+          - image: "!*:latest"
