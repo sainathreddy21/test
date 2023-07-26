@@ -1,5 +1,5 @@
 apiVersion: storage.gcp.upbound.io/v1beta1
-kind: Bucket12
+kind: PubSub
 metadata:
   Name: crossplane-bucket-test
   labels:
