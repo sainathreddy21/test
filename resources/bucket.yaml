@@ -8,7 +8,7 @@ metadata:
   labels:
     tenant: "scratch"
     cost-center: "23451"
-  name: io-sp-test4
+  name: i-o
 spec:
   deletionPolicy: Orphan 
   forProvider:
