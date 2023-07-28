@@ -16,7 +16,7 @@ spec:
   - match:
       resources:
         kinds:
-        - Bucket
+          - Bucket
     name: bucket-name-check
     validate:
       message: Please create bucket name following IO Standards
