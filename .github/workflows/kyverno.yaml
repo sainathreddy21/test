@@ -5,9 +5,9 @@ on:
 env:
   VERSION: v1.10.0
 jobs:
-  permissions: write-all
   test:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
