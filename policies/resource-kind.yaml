@@ -20,5 +20,7 @@ spec:
     name: bucket-name-check
     validate:
       message: Please create bucket name following IO Standards
-      pattern: "^io-[a-z][a-z]"
+      pattern: 
+        metadata:
+          name: "^io-[a-z][a-z]"
       patternType: "regexp"
