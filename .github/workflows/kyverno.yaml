@@ -5,6 +5,7 @@ on:
 env:
   VERSION: v1.10.0
 jobs:
+  permissions: write-all
   test:
     runs-on: ubuntu-latest
     steps:
