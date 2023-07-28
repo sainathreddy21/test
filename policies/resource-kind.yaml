@@ -22,5 +22,5 @@ spec:
       message: Please create bucket name following IO Standards
       pattern: 
         metadata:
-          name: "^io-(sp|dp|kp)$"
+          name: io-sp
       patternType: "regexp"
