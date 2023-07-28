@@ -22,4 +22,4 @@ spec:
       message: Please create bucket name following IO Standards
       pattern:
         metadata:
-          name: [a-z]-[a-z]
+          name: "^io-[a-z][a-z]"
