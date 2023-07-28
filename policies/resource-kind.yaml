@@ -16,9 +16,10 @@ spec:
   - match:
       resources:
         kinds:
-        - "*"
+        - Bucket
     name: add-kind
     validate:
-      message: The Resource kind is not approved by IO.
+      message: Please create bucket name following IO Standards
       pattern:
-        kind: Bucket
+        metadata:
+          name: "{{ regex_match('io-[a-z][a-z]-test4$')}}"

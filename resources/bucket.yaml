@@ -1,14 +1,22 @@
 apiVersion: storage.gcp.upbound.io/v1beta1
 kind: Bucket
 metadata:
-  Name: crossplane-bucket-test
+  annotations:
+    crossplane.io/external-name: io-sp-test4
+    meta.io.cvshealth.com/tenant: "scratch"
+    meta.io.cvshealth.com/cost-center: "23451"
   labels:
-    docs.crossplane.io/example: provider-gcp
+    tenant: "scratch"
+    cost-center: "23451"
+  name: io-sp-test4
 spec:
+  deletionPolicy: Orphan 
   forProvider:
     location: US
+    labels:
+      tenant: scratch
+      # dataClassification: proprietary
+      cost-center: "23451"
+    uniformBucketLevelAccess: true
   providerConfigRef:
-    name: default-test
-  apiVersion: v1
-  labels:
-    purpose: production
+    name: default
