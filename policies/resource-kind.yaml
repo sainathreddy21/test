@@ -22,4 +22,4 @@ spec:
       message: Please create bucket name following IO Standards
       pattern:
         metadata:
-          name: "{{ regex_match('io-sp-test4')}}"
+          name: io-sp-test4
