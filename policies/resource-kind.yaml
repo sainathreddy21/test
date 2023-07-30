@@ -20,7 +20,6 @@ spec:
     name: bucket-name-check
     validate:
       message: Please create bucket name following IO Standards
-      patternType: "regexp"
       pattern: 
-        metadata:
-          name: "scratch-code-(pdev|dev)"
+        spec:
+          name: "^scratch-code-(pdev|dev)$"
