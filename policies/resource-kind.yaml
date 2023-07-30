@@ -22,4 +22,4 @@ spec:
       message: Please create bucket name following IO Standards
       pattern: 
         spec:
-          name: "^scratch-code-(pdev|dev)$"
+          name: ^scratch-code-(pdev|dev)$
