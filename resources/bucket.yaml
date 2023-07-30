@@ -2,13 +2,13 @@ apiVersion: storage.gcp.upbound.io/v1beta1
 kind: Bucket
 metadata:
   annotations:
-    crossplane.io/external-name: io-sp1
+    crossplane.io/external-name: scrtach-code-pdev
     meta.io.cvshealth.com/tenant: "scratch"
     meta.io.cvshealth.com/cost-center: "23451"
   labels:
     tenant: "scratch"
     cost-center: "23451"
-  name: io-sp1
+  name: scrtach-code-pdev
 spec:
   deletionPolicy: Orphan 
   forProvider:
