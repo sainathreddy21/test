@@ -22,5 +22,5 @@ spec:
       message: Please create bucket name following IO Standards
       pattern: 
         metadata:
-          name: io-sp*
+          name: scratch-code-(pdev|dev|test|prod)
       patternType: "regexp"
