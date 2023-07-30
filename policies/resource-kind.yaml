@@ -22,4 +22,4 @@ spec:
       message: Please create bucket name following IO Standards
       pattern: 
         metadata:
-          name: scratch-code-*
+          name: scratch-code-pdev|dev|test|prod
