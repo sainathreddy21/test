@@ -22,4 +22,4 @@ spec:
       message: Please create bucket name following IO Standards
       pattern: 
         metadata:
-          name: scratch-code-pdev
+          name: {{request.object.metadata.labels.tenant}}-code-pdev
